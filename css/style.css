@@ -84,6 +84,16 @@ ul {
   border-bottom: 1px solid var(--clr-border);
 }
 
+/* backdrop-filter makes this element a containing block for fixed
+   descendants, which traps the full-screen .nav overlay inside the
+   header's own height instead of the viewport. Drop the filter while
+   the mobile nav is open so .nav can size itself to the viewport. */
+body.nav-open .site-header.header--scrolled {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+  transition: none;
+}
+
 .site-header .container {
   display: flex;
   align-items: center;
@@ -179,6 +189,10 @@ body.nav-open .hamburger::after {
 
   body.nav-open .nav {
     transform: translateX(0);
+  }
+
+  body.nav-open {
+    overflow: hidden;
   }
 
   .nav__list {
