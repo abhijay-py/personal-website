@@ -1,4 +1,4 @@
 # Personal Webpage
-A webpage portfolio of my projects along with other things of mine. <br>
-Using a stylesheet from Kevin Powell.<br>
-https://abhijay-py.github.io/
+A webpage portfolio of my projects along with other information about me. <br>
+Adpated from a [template](https://github.com/RyanFitzgerald/devportfolio/tree/master) from Ryan Fitzgerald.<br>
+https://abhijay.comparch.dev

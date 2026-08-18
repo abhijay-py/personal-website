@@ -3,86 +3,76 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <!-- ADJUST BETWEEN PAGES -->
         <title>Giorno Discord Bot | Abhijay Achukola</title>
 
-        <!-- Formatting Stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
+
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="../index.html"><img src="../img/title_icon.png" alt=""></a>
+        <header class="site-header">
+            <div class="container">
+                <a href="../index.html#home" class="logo">Abhijay<span>-SV</span></a>
+
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html#about" class="nav__link">About</a></li>
+                        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="../index.html#education" class="nav__link">Education</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <u1 class="nav__list">
-                    <!-- ADJUST BETWEEN PAGES -->
-                    <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="../projects.html" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="../notes.html" class="nav__link">Notes</a></li>
-                </u1>
-            </nav>
         </header>
 
-        <!-- Introduction -->
-        <!-- ADJUST BETWEEN PAGES -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                <strong>Giorno Discord Bot</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">A Discord Bot with a Plugin System</p>
-            <img src="../img/gbot.jpg" alt="" class="intro__img">
-        </section>
+        <main class="container">
+            <section class="project-hero">
+                <a href="../index.html#projects" class="project-detail__back"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                <p class="project-detail__eyebrow">Project</p>
+                <h1 class="project-detail__title">Giorno Discord Bot</h1>
+                <p class="project-detail__subtitle">A Discord bot with a plugin system.</p>
+                <ul class="project-detail__tags">
+                    <li>Python</li>
+                    <li>Discord API</li>
+                </ul>
+                <img src="../img/gbot.jpg" alt="Giorno Discord bot" class="project-hero__image">
+            </section>
 
-        <!-- Description -->
-        <div class="portfolio-item-individual">            
-            <div class="about-me__body">
-                <p>This project is a discord bot with a plugin system created in Python.</p>
-                <p>The bot is a customizable bot that has five plugins that you can pick and choose from, on top of the base anime commands that can scrape <a href="https://myanimelist.net/" class="inline_link" target="_blank" rel="noopener noreferrer">MyAnimeList</a> for animes or mangas and retrieve specific users' MyAnimeList statistics or lists.
-                    The five plugins include Music, Moderation, Utility, Leveling and Join/Leave Messages which could all be enabled or disabled at any time.</p>
+            <section class="project-detail__body">
+                <p>This project is a Discord bot with a plugin system created in Python.</p>
+                <p>The bot is a customizable bot that has five plugins that you can pick and choose from, on top of the base anime commands that can scrape <a href="https://myanimelist.net/" target="_blank" rel="noopener noreferrer">MyAnimeList</a> for animes or mangas and retrieve specific users' MyAnimeList statistics or lists. The five plugins include Music, Moderation, Utility, Leveling and Join/Leave Messages which could all be enabled or disabled at any time.</p>
                 <p>This bot also included customizable prefixes, a help command to view commands, and an about command to view which plugins were enabled.</p>
-                <p>The Giorno Giovanna bot was used in over 150 different servers of users. These users were able to access the bot (no longer active) <a href="https://top.gg/bot/785687696781737995" class="inline_link" target="_blank" rel="noopener noreferrer">here</a>.</p>
+                <p>The Giorno Giovanna bot was used in over 150 different servers of users. These users were able to access the bot (no longer active) <a href="https://top.gg/bot/785687696781737995" target="_blank" rel="noopener noreferrer">here</a>.</p>
                 <p>Some examples of these commands and the response from the bot can be seen below.</p>
-                <p>Help Command (to view available commands):</p>
-                <img src="../img/help_gbot.png" alt="" class="center">
-                <p>About Command (to view enabled plugins and bot info):</p>
-                <img src="../img/about_gbot.png" alt="" class="center">
-                <p>AnimeList Command (to view a specified user's animelist):</p>
-                <img src="../img/animelist_gbot.png" alt="" class="center">
-                <p>The source code can be found <a href="https://github.com/abhijay-py/giorno-bot" class="inline_link" target="_blank" rel="noopener noreferrer">here</a>.</p>
-                <p><a href="../projects.html" class="inline_link">Back</a></p>
+                <p>Help command (to view available commands):</p>
+                <img src="../img/help_gbot.png" alt="Screenshot of the Giorno bot help command.">
+                <p>About command (to view enabled plugins and bot info):</p>
+                <img src="../img/about_gbot.png" alt="Screenshot of the Giorno bot about command.">
+                <p>AnimeList command (to view a specified user's animelist):</p>
+                <img src="../img/animelist_gbot.png" alt="Screenshot of the Giorno bot animelist command.">
+                <p>The source code can be found <a href="https://github.com/abhijay-sv/giorno-bot" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 Abhijay Achukola. All rights reserved.</p>
             </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <a href="mailto:abhijay@comparch.dev" class="footer__link">abhijay@comparch.dev</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/abhijay-achukola" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/abhijay-py" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
         </footer>
-        <script src="../js/index.js"></script>
+
+        <script src="../js/main.js"></script>
     </body>
-
-
-
-
 </html>

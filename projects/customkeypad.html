@@ -3,83 +3,73 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- ADJUST BETWEEN PAGES -->
         <title>Custom Keypad | Abhijay Achukola</title>
 
-        <!-- Formatting Stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
+
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="../index.html"><img src="../img/title_icon.png" alt=""></a>
+        <header class="site-header">
+            <div class="container">
+                <a href="../index.html#home" class="logo">Abhijay<span>-SV</span></a>
+
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html#about" class="nav__link">About</a></li>
+                        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="../index.html#education" class="nav__link">Education</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <u1 class="nav__list">
-                    <!-- ADJUST BETWEEN PAGES -->
-                    <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="../projects.html" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="../notes.html" class="nav__link">Notes</a></li>
-                </u1>
-            </nav>
         </header>
 
-        <!-- Introduction -->
-        <!-- ADJUST BETWEEN PAGES -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                <strong>Custom Keypad</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">A custom keypad with 6 keys and a volume knob.</p>
-            <img src="../img/keyboard.png" alt="" class="intro__img">
-        </section>
+        <main class="container">
+            <section class="project-hero">
+                <a href="../index.html#projects" class="project-detail__back"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                <p class="project-detail__eyebrow">Project</p>
+                <h1 class="project-detail__title">Custom Keypad</h1>
+                <p class="project-detail__subtitle">A custom keypad with 6 keys and a volume knob.</p>
+                <ul class="project-detail__tags">
+                    <li>KiCAD</li>
+                    <li>C/C++</li>
+                    <li>STM32</li>
+                </ul>
+                <img src="../img/custom_keypad.png" alt="Custom keypad device" class="project-hero__image">
+            </section>
 
-        <!-- Description -->
-        <div class="portfolio-item-individual">            
-            <div class="about-me__body">
+            <section class="project-detail__body">
                 <p>This project is a custom keypad that allows for six customizable keys (in embedded software) and a volume knob that can send volume up, volume down, and volume mute commands.</p>
                 <p>This device utilizes the USB HID device interface and custom HID report using Consumer + Keyboard HID reports to allow me to send both media commands such as volume control and play/pause and regular keyboard commands. I also utilized the EXTI pin interrupt system and a quadrature decoder to decode the rotary encoder to ensure proper volume control.</p>
-                <p>I modeled the circuitry and designed the PCB in KiCAD after prototyping and selecting the individual components. I also solderered some of the components onto the board, programmed the firmware onto the microcontroller, and modeled the case in Fusion 360 and 3D printed it with black PLA filament.</p>
-                <p>The Fully Assembled PCB:</p>
-                <img src="../img/final_keypad_pcb.png" alt="An image of a pcb of a keypad device." class="center">
-                <p>The drive is controlled by a STM32H7 microcontroller, utilizing Cherry MX brown switches and non-descript black keycaps for the keys, a rotary encoder and knurled black knob for the volume knob, and a usb-c connector for a wide-spread connectivity standard to the device.</p>
+                <p>I modeled the circuitry and designed the PCB in KiCAD after prototyping and selecting the individual components. I also soldered some of the components onto the board, programmed the firmware onto the microcontroller, and modeled the case in Fusion 360 and 3D printed it with black PLA filament.</p>
+                <p>The fully assembled PCB:</p>
+                <img src="../img/final_keypad_pcb.png" alt="An image of a PCB of a keypad device.">
+                <p>The drive is controlled by a STM32H7 microcontroller, utilizing Cherry MX brown switches and non-descript black keycaps for the keys, a rotary encoder and knurled black knob for the volume knob, and a USB-C connector for a wide-spread connectivity standard to the device.</p>
                 <p>I programmed the keys on the device to be bound to rewind, play/pause, and skip for the top row to provide media commands, and space, x, and z on the bottom row for osu! functionality.</p>
-                <p> The Device:</p>
-                <img src="../img/custom_keypad.png" alt="An image of a keypad device." class="center">
+                <p>The source code, CAD models of the casing, and the schematics and PCB design can be found <a href="https://github.com/abhijay-sv/custom-keypad" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </section>
+        </main>
 
-                <p> The source code, CAD models of the casing, and the schematics and PCB design can be found <a href="https://github.com/abhijay-py/custom-keypad" class="inline_link">here</a>.</p>
-                <p><a href="../projects.html" class="inline_link">Back</a></p>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 Abhijay Achukola. All rights reserved.</p>
             </div>
-        </div>
-        
-        <!-- Footer -->
-        <footer class="footer">
-                <a href="mailto:abhijay@comparch.dev" class="footer__link">abhijay@comparch.dev</a>
-                <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/abhijay-achukola" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/abhijay-py" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
         </footer>
-        <script src="../js/index.js"></script>
+
+        <script src="../js/main.js"></script>
     </body>
-
-
-
-
 </html>

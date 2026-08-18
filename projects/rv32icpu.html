@@ -3,87 +3,73 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- ADJUST BETWEEN PAGES -->
         <title>RV32I Dual Core Processor | Abhijay Achukola</title>
 
-        <!-- Formatting Stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
+
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="../index.html"><img src="../img/title_icon.png" alt=""></a>
+        <header class="site-header">
+            <div class="container">
+                <a href="../index.html#home" class="logo">Abhijay<span>-SV</span></a>
+
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html#about" class="nav__link">About</a></li>
+                        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="../index.html#education" class="nav__link">Education</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <u1 class="nav__list">
-                    <!-- ADJUST BETWEEN PAGES -->
-                    <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="../projects.html" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="../notes.html" class="nav__link">Notes</a></li>
-                </u1>
-            </nav>
         </header>
 
-        <!-- Introduction -->
-        <!-- ADJUST BETWEEN PAGES -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                <strong>RV32I Dual Core Processor</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">A RISC-V dual-core processor implementation.</p>
-            <img src="../img/cpu.jpg" alt="" class="intro__img">
-        </section>
+        <main class="container">
+            <section class="project-hero">
+                <a href="../index.html#projects" class="project-detail__back"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                <p class="project-detail__eyebrow">Project</p>
+                <h1 class="project-detail__title">RV32I Dual Core Processor</h1>
+                <p class="project-detail__subtitle">A RISC-V dual-core processor implementation.</p>
+                <ul class="project-detail__tags">
+                    <li>SystemVerilog</li>
+                    <li>QuestaSim</li>
+                </ul>
+                <img src="../img/cpu.jpg" alt="RV32I dual core processor" class="project-hero__image">
+            </section>
 
-        <!-- Description -->
-        <div class="portfolio-item-individual">            
-            <div class="about-me__body">
-                <p>This project is a dual-core in-order RISC-V processor with a 5-stage pipeline with seperate L1 2-way set associative dcache and direct mapped icache, utilizing the MSI cache coherence protocol. It also boasted an always-not taken branch predictor, a hazard unit, and a forwarding unit to minimize stalls in the processor. This project was implemented in SystemVerilog. </p>
-                <p>All RV321 Base Integer Instructions listed <a href="https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/notebooks/RISCV/RISCV_CARD.pdf" class="inline_link" target="_blank" rel="noopener noreferrer">here</a> were implemented apart from a few exceptions. Instructions not
-                    implemented include all environment instructions and all load and store instructions apart from LW and SW to simplify data memory handling. Also, the load reserve and store conditional instructions (lr.w, sc.w) were implemented to allow for some basic synchronization in the multicore processor. </p>
-                <p> The initial single-core design was created by myself, but the pipelined, cached, and multicore implementations were done in collaboration with Geetha Prasuna Yarramneni for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/UGO/CourseInfo/courseInfo?courseid=143&show=true&type=undergrad" class="inline_link" target="_blank" rel="noopener noreferrer">ECE 43700</a> at Purdue University. I primarily worked on the dcache and bus controller (especially on the debugging side), as well as splitting the work for the initial no-cache pipeline implementation.</p>
-                <p>This processor was debugged using QuestaSim and was synthesized and tested on Intel Cyclone FPGAs. This processor was also tested against RISC-V assembly files that we wrote and was benchmarked with a mergesort assembly program. </p>
-                <p>The midterm report below showcased the improvements that came about with pipelining, while the final report compared the single-core processor, pipelined processor, pipelined processor with caches, and multicore processor (on single thread and dual thread programs). RTL Files will not be published publically cooperate with academic dishonesty policies laid out in the course.</p>
+            <section class="project-detail__body">
+                <p>This project is a dual-core in-order RISC-V processor with a 5-stage pipeline with separate L1 2-way set associative dcache and direct mapped icache, utilizing the MSI cache coherence protocol. It also boasted an always-not taken branch predictor, a hazard unit, and a forwarding unit to minimize stalls in the processor. This project was implemented in SystemVerilog.</p>
+                <p>All RV32I Base Integer Instructions listed <a href="https://www.cs.sfu.ca/~ashriram/Courses/CS295/assets/notebooks/RISCV/RISCV_CARD.pdf" target="_blank" rel="noopener noreferrer">here</a> were implemented apart from a few exceptions. Instructions not implemented include all environment instructions and all load and store instructions apart from LW and SW to simplify data memory handling. Also, the load reserve and store conditional instructions (lr.w, sc.w) were implemented to allow for some basic synchronization in the multicore processor.</p>
+                <p>I designed the initial single-core processor on my own, then extended it to the pipelined, cached, and multicore versions as part of a two-person team for <a href="https://engineering.purdue.edu/ECE/Academics/Undergraduates/UGO/UGO/CourseInfo/courseInfo?courseid=143&show=true&type=undergrad" target="_blank" rel="noopener noreferrer">ECE 43700</a> at Purdue University. My work centered on the dcache and bus controller, particularly debugging them, along with dividing up the tasks for the initial no-cache pipeline implementation.</p>
+                <p>This processor was debugged using QuestaSim and was synthesized and tested on Intel Cyclone FPGAs. This processor was also tested against RISC-V assembly files that we wrote and was benchmarked with a mergesort assembly program.</p>
+                <p>The midterm report below showcased the improvements that came about with pipelining, while the final report compared the single-core processor, pipelined processor, pipelined processor with caches, and multicore processor (on single thread and dual thread programs). RTL files will not be published publicly to comply with the academic dishonesty policies laid out in the course.</p>
                 <p>Midterm Report:</p>
-                <iframe class="pdf" 
-                src="../docs/midterm_report.pdf"
-                width="100%" height="1000"></iframe>
+                <iframe src="../docs/midterm_report.pdf" width="100%" height="1000"></iframe>
                 <p>Final Report:</p>
-                <iframe class="pdf" 
-                src="../docs/final_report.pdf"
-                width="100%" height="1000"></iframe>
+                <iframe src="../docs/final_report.pdf" width="100%" height="1000"></iframe>
+            </section>
+        </main>
 
-                <p><a href="../projects.html" class="inline_link">Back</a></p>
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 Abhijay Achukola. All rights reserved.</p>
             </div>
-        </div>
-        
-        <!-- Footer -->
-        <footer class="footer">
-            <a href="mailto:abhijay@comparch.dev" class="footer__link">abhijay@comparch.dev</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/abhijay-achukola" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/abhijay-py" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
         </footer>
-        <script src="../js/index.js"></script>
+
+        <script src="../js/main.js"></script>
     </body>
-
-
-
-
 </html>

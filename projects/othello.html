@@ -3,80 +3,71 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- ADJUST BETWEEN PAGES -->
-        <title>Othello | Abhijay Achukola</title>
+        <title>Othello Recreation With AI Players | Abhijay Achukola</title>
 
-        <!-- Formatting Stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico?" />
+
         <link rel="stylesheet" href="../css/style.css">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="../index.html"><img src="../img/title_icon.png" alt=""></a>
-            </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <u1 class="nav__list">
-                    <!-- ADJUST BETWEEN PAGES -->
-                    <li class="nav__item"><a href="../index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="../projects.html" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="../notes.html" class="nav__link">Notes</a></li>
-                </u1>
-            </nav>
-        </header>
-        
-        <!-- Introduction -->
-        <!-- ADJUST BETWEEN PAGES -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                <strong>Othello</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">A Recreation of Othello</p>
-            <img src="../img/othello.png" alt="" class="intro__img">
-        </section>
+        <header class="site-header">
+            <div class="container">
+                <a href="../index.html#home" class="logo">Abhijay<span>-SV</span></a>
 
-        <!-- Description -->
-        <div class="portfolio-item-individual">            
-            <div class="about-me__body">
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html#about" class="nav__link">About</a></li>
+                        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="../index.html#education" class="nav__link">Education</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="project-hero">
+                <a href="../index.html#projects" class="project-detail__back"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                <p class="project-detail__eyebrow">Project</p>
+                <h1 class="project-detail__title">Othello Recreation With AI Players</h1>
+                <p class="project-detail__subtitle">A recreation of Othello.</p>
+                <ul class="project-detail__tags">
+                    <li>Python</li>
+                    <li>Pygame</li>
+                    <li>AI</li>
+                </ul>
+                <img src="../img/othello.png" alt="Othello recreation" class="project-hero__image">
+            </section>
+
+            <section class="project-detail__body">
                 <p>This project is a recreation of Othello using Pygame and Python.</p>
                 <p>The game gives options to play against another player or AIs of various difficulty. Logs are also maintained for error patching and game records.</p>
-                <p>The difficulty of the AI varies from easy and medium, to hard and expert. The easy AI chooses its moves randomly, the medium AI uses a greedy algorithm, 
-                    the hard algorithm uses a <a href="https://en.wikipedia.org/wiki/Minimax" class="inline_link" target="_blank" rel="noopener noreferrer">minimax algorithm</a> with depth 2, 
-                    and the expert algorithm uses a minimax algorithm with depth 5 and <a href="https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning" class="inline_link" target="_blank" rel="noopener noreferrer">alpha-beta pruning</a> to reduce computation time.</p>
-                <p>Gameplay View:</p>
-                <img src="../img/othello_gameplay.png" alt="" class="intro__img">
-                <p>The source code can be found <a href="https://github.com/abhijay-py/othello" target="_blank" rel="noopener noreferrer">here</a>, along with a zipfile that can be downloaded to play the game!</p>
-                <p><a href="../projects.html" class="inline_link">Back</a></p>
+                <p>The difficulty of the AI varies from easy and medium, to hard and expert. The easy AI chooses its moves randomly, the medium AI uses a greedy algorithm, the hard algorithm uses a <a href="https://en.wikipedia.org/wiki/Minimax" target="_blank" rel="noopener noreferrer">minimax algorithm</a> with depth 2, and the expert algorithm uses a minimax algorithm with depth 5 and <a href="https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning" target="_blank" rel="noopener noreferrer">alpha-beta pruning</a> to reduce computation time.</p>
+                <p>Gameplay view:</p>
+                <img src="../img/othello_gameplay.png" alt="A screenshot of Othello gameplay.">
+                <p>The source code can be found <a href="https://github.com/abhijay-sv/othello" target="_blank" rel="noopener noreferrer">here</a>, along with a zip file that can be downloaded to play the game!</p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 Abhijay Achukola. All rights reserved.</p>
             </div>
-        </div>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <a href="mailto:abhijay@comparch.dev" class="footer__link">abhijay@comparch.dev</a>
-            <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/abhijay-achukola" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/abhijay-py" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
         </footer>
-        <script src="../js/index.js"></script>
+
+        <script src="../js/main.js"></script>
     </body>
-
-
-
-
 </html>

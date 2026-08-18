@@ -3,83 +3,257 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- ADJUST BETWEEN PAGES -->
-        <title>Abhijay Achukola</title>
+        <title>Abhijay Achukola - Computer Architecture Researcher & RTL Design Engineer</title>
 
-        <!-- Formatting Stylesheets -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" 
-        integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
-        <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?" />
+
         <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <header>
-            <div class="logo">
-                <a href="index.html"><img src="img/title_icon.png" alt=""></a>
+        <header class="site-header">
+            <div class="container">
+                <a href="#home" class="logo">Abhijay<span>-SV</span></a>
+
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="#about" class="nav__link">About</a></li>
+                        <li><a href="#projects" class="nav__link">Projects</a></li>
+                        <li><a href="#education" class="nav__link">Education</a></li>
+                    </ul>
+                </nav>
             </div>
-            <button class="nav-toggle" aria-label="toggle navigation">
-                <span class="hamburger"></span>
-            </button>
-            <nav class="nav">
-                <u1 class="nav__list">
-                    <!-- ADJUST BETWEEN PAGES -->
-                    <li class="nav__item"><a href="index.html" class="nav__link">Home</a></li>
-                    <li class="nav__item"><a href="projects.html" class="nav__link">Projects</a></li>
-                    <li class="nav__item"><a href="notes.html" class="nav__link">Notes</a></li>
-                </u1>
-            </nav>
         </header>
 
-        <!-- Introduction -->
-        <!-- ADJUST BETWEEN PAGES -->
-        <section class="intro" id="home">
-            <h1 class="section__title section__title--intro">
-                <strong>Abhijay Achukola</strong>
-            </h1>
-            <p class="section__subtitle section__subtitle--intro">Computer Engineer</p>
-            <img src="img/profile_pic.jpg" alt="a picture of Abhijay Achukola" class="intro__img">
-        </section>
-        <!-- About Me -->
-        <section class="about-me" id="about-me">
-            <h2 class="section__title section__title--about">About Me</h2>
-            <p class="section__subtitle section__subtitle--about">ECE Graduate Student at Georgia Tech</p>
-            
-            <div class="about-me__body">
-                <p>My name is Abhijay Achukola and I am a graduate student at Georgia Institute of Technology graduating in Spring 2027.</p>
-                <p> I am currently pursuing a masters degree in electrical and computer engineering while conducting research as a part of the Vortex RISC-V GPGPU team.</p>
-                <p>My interests:</p>
-                <ul>
-                    <li>Computer Architecture</li>
-                    <li>VLSI Design</li>
-                    <li>Software-Hardware Co-design</li>
-                    <li>Artificial Intelligence</li>
-                </ul>
-                <p>To view other pages, use the drop down menu in the top right!</p>
+        <main class="container">
+            <!-- ============================== Hero ============================== -->
+            <section class="hero" id="home">
+                <p class="hero__greeting">Hello! &#128075;</p>
+                <h1 class="hero__name">I'm <span>Abhijay Achukola</span></h1>
+                <p class="hero__title">Computer Architecture Researcher & RTL Design Engineer</p>
+
+                <div class="hero__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+            </section>
+
+            <!-- ============================== About ============================== -->
+            <section id="about">
+                <div class="section-grid">
+                    <div class="section-heading">
+                        <h2 class="section-heading__title">About</h2>
+                        <span class="section-heading__bar"></span>
+                    </div>
+
+                    <div>
+                        <p class="about__bio">
+                            My name is Abhijay Achukola and I am a graduate student at Georgia
+                            Institute of Technology graduating in Spring 2027. I am currently
+                            pursuing a master's degree in electrical and computer engineering
+                            while conducting research as a part of the Vortex RISC-V GPGPU team.
+                        </p>
+
+                        <ul class="skills">
+                            <li>SystemVerilog</li>
+                            <li>C/C++</li>
+                            <li>Python</li>
+                            <li>QuestaSim</li>
+                            <li>Xilinx Vivado</li>
+                            <li>AMBA (AHB/APB)</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <!-- ============================= Projects ============================= -->
+            <section id="projects">
+                <div class="section-grid">
+                    <div class="section-heading">
+                        <h2 class="section-heading__title">Projects</h2>
+                        <span class="section-heading__bar"></span>
+                    </div>
+
+                    <ul class="projects__list">
+                        <li>
+                            <a class="project-card project-card--linked" href="projects/rv32icpu.html">
+                                <div class="project-card__thumb">
+                                    <img src="img/cpu.jpg" alt="RV32I dual core processor" loading="lazy">
+                                </div>
+                                <div>
+                                    <p class="project-card__index">01</p>
+                                    <h3 class="project-card__title">RV32I Dual Core Processor</h3>
+                                    <p class="project-card__desc">
+                                        A RISC-V dual-core in-order processor with a 5-stage
+                                        pipeline, L1 data/instruction caches, and a simple
+                                        not-taken branch predictor, utilizing the MSI
+                                        cache-coherence protocol.
+                                    </p>
+                                    <ul class="project-card__tags">
+                                        <li>SystemVerilog</li>
+                                        <li>QuestaSim</li>
+                                    </ul>
+                                </div>
+                                <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="project-card project-card--linked" href="projects/customkeypad.html">
+                                <div class="project-card__thumb">
+                                    <img src="img/custom_keypad.png" alt="Custom keypad device" loading="lazy">
+                                </div>
+                                <div>
+                                    <p class="project-card__index">02</p>
+                                    <h3 class="project-card__title">Custom Keypad</h3>
+                                    <p class="project-card__desc">
+                                        A custom keypad with 6 keys and a volume knob built ontop
+                                        of a STM32H7 microcontroller as a USB HID device with a
+                                        custom-designed PCB and 3D-printed case.
+                                    </p>
+                                    <ul class="project-card__tags">
+                                        <li>KiCAD</li>
+                                        <li>C/C++</li>
+                                        <li>STM32</li>
+                                    </ul>
+                                </div>
+                                <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="project-card project-card--linked" href="projects/secureusbdrive.html">
+                                <div class="project-card__thumb">
+                                    <img src="img/secure_usb_drive.jpg" alt="Secure multi-user USB drive" loading="lazy" style="object-position: bottom;">
+                                </div>
+                                <div>
+                                    <p class="project-card__index">03</p>
+                                    <h3 class="project-card__title">Secure Multi-User USB Drive</h3>
+                                    <p class="project-card__desc">
+                                        A multi-bank USB drive secured by fingerprint and password,
+                                        letting four separate users access their own data on one
+                                        STM32H7-driven device.
+                                    </p>
+                                    <ul class="project-card__tags">
+                                        <li>KiCAD</li>
+                                        <li>C/C++</li>
+                                        <li>STM32</li>
+                                    </ul>
+                                </div>
+                                <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="project-card project-card--linked" href="projects/othello.html">
+                                <div class="project-card__thumb">
+                                    <img src="img/othello_gameplay.png" alt="Othello recreation gameplay" loading="lazy">
+                                </div>
+                                <div>
+                                    <p class="project-card__index">04</p>
+                                    <h3 class="project-card__title">Othello Recreation With AI Players</h3>
+                                    <p class="project-card__desc">
+                                        A recreation of Othello with four AI difficulty tiers,
+                                        ranging from random moves to a depth-5 minimax player with
+                                        alpha-beta pruning.
+                                    </p>
+                                    <ul class="project-card__tags">
+                                        <li>Python</li>
+                                        <li>Pygame</li>
+                                        <li>AI</li>
+                                    </ul>
+                                </div>
+                                <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a class="project-card project-card--linked" href="projects/gdiscordbot.html">
+                                <div class="project-card__thumb">
+                                    <img src="img/gbot.jpg" alt="Giorno Discord bot" loading="lazy">
+                                </div>
+                                <div>
+                                    <p class="project-card__index">05</p>
+                                    <h3 class="project-card__title">Giorno Discord Bot</h3>
+                                    <p class="project-card__desc">
+                                        A Discord bot with a plugin system spanning Music,
+                                        Moderation, Utility, Leveling, and Join/Leave messages,
+                                        used across 150+ servers.
+                                    </p>
+                                    <ul class="project-card__tags">
+                                        <li>Python</li>
+                                        <li>Discord API</li>
+                                    </ul>
+                                </div>
+                                <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- ============================ Education ============================= -->
+            <section id="education">
+                <div class="section-grid">
+                    <div class="section-heading">
+                        <h2 class="section-heading__title">Education</h2>
+                        <span class="section-heading__bar"></span>
+                    </div>
+
+                    <ul class="timeline">
+                        <li class="timeline-item">
+                            <div class="timeline-card">
+                                <div class="timeline-card__header">
+                                    <div>
+                                        <p class="timeline-card__title">Master of Science in Electrical and Computer Engineering</p>
+                                        <p class="timeline-card__subtitle">Georgia Institute of Technology &middot; Atlanta, GA</p>
+                                    </div>
+                                    <p class="timeline-card__date">Aug 2025 - May 2027</p>
+                                </div>
+                                <ul class="timeline-card__bullets">
+                                    <li>Relevant Coursework: Advanced Computer Architecture, Advanced VLSI Systems</li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-card">
+                                <div class="timeline-card__header">
+                                    <div>
+                                        <p class="timeline-card__title">Bachelor of Science in Computer Engineering</p>
+                                        <p class="timeline-card__subtitle">Purdue University &middot; West Lafayette, IN</p>
+                                    </div>
+                                    <p class="timeline-card__date">Aug 2022 - May 2025</p>
+                                </div>
+                                <ul class="timeline-card__bullets">
+                                    <li>Concentration in Computer Systems</li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 Abhijay Achukola. All rights reserved.</p>
             </div>
-        </section>
-        
-        <!-- Footer -->
-        <footer class="footer">
-                <a href="mailto:abhijay@comparch.dev" class="footer__link">abhijay@comparch.dev</a>
-                <ul class="social-list">
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://linkedin.com/in/abhijay-achukola" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </li>
-                <li class="social-list__item">
-                    <a class="social-list__link" href="https://github.com/abhijay-py" target="_blank" rel="noopener noreferrer">
-                        <i class="fab fa-github"></i>
-                    </a>
-                </li>
-            </ul>
         </footer>
-        <script src="js/index.js"></script>
+
+        <script src="js/main.js"></script>
     </body>
-
-
-
-
 </html>
