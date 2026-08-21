@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>RTL IP Library | Abhijay Achukola</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <a href="../index.html#home" class="logo">Abhijay<span>-SV</span></a>
+
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html#about" class="nav__link">About</a></li>
+                        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="../index.html#education" class="nav__link">Education</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="project-hero">
+                <a href="../index.html#projects" class="project-detail__back"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                <p class="project-detail__eyebrow">Project</p>
+                <h1 class="project-detail__title">RTL IP Library</h1>
+                <p class="project-detail__subtitle">Reusable SystemVerilog Component Library</p>
+                <ul class="project-detail__tags">
+                    <li>SystemVerilog</li>
+                    <li>Verilator</li>
+                </ul>
+                <img src="../img/rtl_ip_library.jpg" alt="RTL IP Library" class="project-hero__image">
+            </section>
+
+            <section class="project-detail__body">
+                <p>This project is a modular library of synthesizable SystemVerilog IP blocks, designed and verified for reuse across SoC-level integration. The library includes CDC synchronizers, an asynchronous FIFO, clock-enable/gating logic, shift registers, and counters, each accompanied by a self-checking testbench and SVA assertions for functional coverage.</p>
+                <p>On top of the base IP blocks, I implemented an APB and SPI protocol suite from spec, structured for reuse across larger SoC-level designs.</p>
+                <p>The repository is organized with per-module RTL/testbench/interface separation and file-list-driven builds, enabling standalone simulation and drop-in reuse of individual IP blocks across projects.</p>
+                <p>The source code can be found <a href="https://github.com/abhijay-sv/rtl-ip-library" target="_blank" rel="noopener noreferrer">here</a>.</p>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 Abhijay Achukola. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
