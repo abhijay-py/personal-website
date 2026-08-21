@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>All Projects | Abhijay Achukola</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
+
+        <link rel="stylesheet" href="../css/style.css">
+    </head>
+    <body>
+        <header class="site-header">
+            <div class="container">
+                <a href="../index.html#home" class="logo">Abhijay<span>-SV</span></a>
+
+                <button class="nav-toggle" aria-label="toggle navigation">
+                    <span class="hamburger"></span>
+                </button>
+
+                <nav class="nav">
+                    <ul class="nav__list">
+                        <li><a href="../index.html#about" class="nav__link">About</a></li>
+                        <li><a href="../index.html#projects" class="nav__link">Projects</a></li>
+                        <li><a href="../index.html#education" class="nav__link">Education</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <main class="container">
+            <section class="project-hero">
+                <a href="../index.html#projects" class="project-detail__back"><i class="fa-solid fa-arrow-left"></i> Back to Projects</a>
+                <p class="project-detail__eyebrow">Projects</p>
+                <h1 class="project-detail__title">All Projects</h1>
+                <p class="project-detail__subtitle">A complete list of my projects.</p>
+            </section>
+
+            <section class="projects-index__body">
+                <ul class="projects__list">
+                    <li>
+                        <a class="project-card project-card--linked" href="rtlip.html">
+                            <div class="project-card__thumb">
+                                <img src="../img/rtl_ip_library.jpg" alt="RTL IP Library" loading="lazy">
+                            </div>
+                            <div>
+                                <p class="project-card__index">01</p>
+                                <h3 class="project-card__title">RTL IP Library</h3>
+                                <p class="project-card__desc">
+                                    A modular library of synthesizable SystemVerilog IP
+                                    blocks including CDC synchronizers, async FIFOs, and an
+                                    APB/SPI protocol suite, verified with self-checking
+                                    testbenches and SVA assertions.
+                                </p>
+                                <ul class="project-card__tags">
+                                    <li>SystemVerilog</li>
+                                    <li>Verilator</li>
+                                </ul>
+                            </div>
+                            <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="project-card project-card--linked" href="rv32icpu.html">
+                            <div class="project-card__thumb">
+                                <img src="../img/cpu.jpg" alt="RV32I dual core processor" loading="lazy">
+                            </div>
+                            <div>
+                                <p class="project-card__index">02</p>
+                                <h3 class="project-card__title">RV32I Dual Core Processor</h3>
+                                <p class="project-card__desc">
+                                    A RISC-V dual-core in-order processor with a 5-stage
+                                    pipeline, L1 data/instruction caches, and a simple
+                                    not-taken branch predictor, utilizing the MSI
+                                    cache-coherence protocol.
+                                </p>
+                                <ul class="project-card__tags">
+                                    <li>SystemVerilog</li>
+                                    <li>QuestaSim</li>
+                                </ul>
+                            </div>
+                            <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="project-card project-card--linked" href="customkeypad.html">
+                            <div class="project-card__thumb">
+                                <img src="../img/custom_keypad.png" alt="Custom keypad device" loading="lazy">
+                            </div>
+                            <div>
+                                <p class="project-card__index">03</p>
+                                <h3 class="project-card__title">Custom Keypad</h3>
+                                <p class="project-card__desc">
+                                    A custom keypad with 6 keys and a volume knob built ontop
+                                    of a STM32H7 microcontroller as a USB HID device with a
+                                    custom-designed PCB and 3D-printed case.
+                                </p>
+                                <ul class="project-card__tags">
+                                    <li>KiCAD</li>
+                                    <li>C/C++</li>
+                                    <li>STM32</li>
+                                </ul>
+                            </div>
+                            <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="project-card project-card--linked" href="secureusbdrive.html">
+                            <div class="project-card__thumb">
+                                <img src="../img/secure_usb_drive.jpg" alt="Secure multi-user USB drive" loading="lazy" style="object-position: bottom;">
+                            </div>
+                            <div>
+                                <p class="project-card__index">04</p>
+                                <h3 class="project-card__title">Secure Multi-User USB Drive</h3>
+                                <p class="project-card__desc">
+                                    A multi-bank USB drive secured by fingerprint and password,
+                                    letting four separate users access their own data on one
+                                    STM32H7-driven device.
+                                </p>
+                                <ul class="project-card__tags">
+                                    <li>KiCAD</li>
+                                    <li>C/C++</li>
+                                    <li>STM32</li>
+                                </ul>
+                            </div>
+                            <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="project-card project-card--linked" href="othello.html">
+                            <div class="project-card__thumb">
+                                <img src="../img/othello_gameplay.png" alt="Othello recreation gameplay" loading="lazy">
+                            </div>
+                            <div>
+                                <p class="project-card__index">05</p>
+                                <h3 class="project-card__title">Othello Recreation With AI Players</h3>
+                                <p class="project-card__desc">
+                                    A recreation of Othello with four AI difficulty tiers,
+                                    ranging from random moves to a depth-5 minimax player with
+                                    alpha-beta pruning.
+                                </p>
+                                <ul class="project-card__tags">
+                                    <li>Python</li>
+                                    <li>Pygame</li>
+                                    <li>AI</li>
+                                </ul>
+                            </div>
+                            <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                    </li>
+
+                    <li>
+                        <a class="project-card project-card--linked" href="gdiscordbot.html">
+                            <div class="project-card__thumb">
+                                <img src="../img/gbot.jpg" alt="Giorno Discord bot" loading="lazy">
+                            </div>
+                            <div>
+                                <p class="project-card__index">06</p>
+                                <h3 class="project-card__title">Giorno Discord Bot</h3>
+                                <p class="project-card__desc">
+                                    A Discord bot with a plugin system spanning Music,
+                                    Moderation, Utility, Leveling, and Join/Leave messages,
+                                    used across 150+ servers.
+                                </p>
+                                <ul class="project-card__tags">
+                                    <li>Python</li>
+                                    <li>Discord API</li>
+                                </ul>
+                            </div>
+                            <span class="project-card__arrow"><i class="fa-solid fa-arrow-up-right-from-square"></i></span>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container">
+                <div class="footer__socials">
+                    <a href="mailto:abhijay@comparch.dev" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+                    <a href="https://linkedin.com/in/abhijay-achukola" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://github.com/abhijay-sv" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <p class="footer__copyright">&copy; 2026 Abhijay Achukola. All rights reserved.</p>
+            </div>
+        </footer>
+
+        <script src="../js/main.js"></script>
+    </body>
+</html>
